@@ -1,0 +1,22 @@
+{
+  "name": "ExpressTypescript",
+  "version": "0.0.0",
+  "description": "Заготовка для разработки сайта на Express  при помощи Typescript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tchgp/ExpressTypescript.git"
+  },
+  "keywords": [
+    "Express",
+    "Typescript"
+  ],
+  "author": "Grigory Tchipoura <tehgp@tut.by>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tchgp/ExpressTypescript/issues"
+  }
+}
