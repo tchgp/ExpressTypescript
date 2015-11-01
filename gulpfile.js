@@ -13,16 +13,16 @@ gulp.task('default', function () {
 
 gulp.task('tsc:commonjs', function () {
     console.log('Compiling typescript');
-    return gulp.src(['src/public/routes/**/*.ts'])
+    return gulp.src(['src/routes/**/*.ts'])
         .pipe(ts({module: 'commonjs'}))
-        .js.pipe(gulp.dest('dist/public/routes/**/*.ts'))
+        .js.pipe(gulp.dest('dist/routes/'))
 });
 
 gulp.task('tsc:amd', function () {
     console.log('Compiling typescript');
     return gulp.src(['src/public/javascript/**/*.ts'])
         .pipe(ts({module: 'commonjs'}))
-        .js.pipe(gulp.dest('dist/public/javascript/**/*.ts'))
+        .js.pipe(gulp.dest('dist/public/javascript/'))
 });
 
 gulp.task( 'compass', function(){
