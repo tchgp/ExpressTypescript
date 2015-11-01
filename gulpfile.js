@@ -21,7 +21,7 @@ gulp.task('tsc:commonjs', function () {
 gulp.task('tsc:amd', function () {
     console.log('Compiling typescript');
     return gulp.src(['src/public/javascript/**/*.ts'])
-        .pipe(ts({module: 'commonjs'}))
+        .pipe(ts({module: 'amd'}))
         .js.pipe(gulp.dest('dist/public/javascript/'))
 });
 
@@ -36,7 +36,7 @@ gulp.task( 'compass', function(){
 });
 
 gulp.task('build', function(){
-    gulp.task('compass', ['tsc:amd', 'tsc:commonjs']);
+    // Сделайте что - нибудь...
 });
 
 gulp.task('watch', function(){
