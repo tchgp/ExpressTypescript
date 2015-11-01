@@ -18,5 +18,10 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tchgp/ExpressTypescript/issues"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-for-compass": "0.0.2",
+    "gulp-typescript": "^2.9.2"
   }
 }

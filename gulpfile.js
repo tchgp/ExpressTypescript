@@ -4,8 +4,10 @@ var gulp = require('gulp'),
 
 gulp.task('default', function () {
     console.log('Доступные модули:\n' + 
+                '- "build"\n' +
                 '- "compass"\n' +
-                '- "typescript"\n' +
+                '- "tsc:amd"\n' +
+				'- "tsc:commonjs"\n' +
                 '- "watch"\n');
 });
 
@@ -31,6 +33,10 @@ gulp.task( 'compass', function(){
             cssDir: 'dist/public/stylesheets',
             force: true
         }));
+});
+
+gulp.task('build', function(){
+    gulp.task('compass', ['tsc:amd', 'tsc:commonjs']);
 });
 
 gulp.task('watch', function(){
