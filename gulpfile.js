@@ -18,6 +18,13 @@ gulp.task('tsc:commonjs', function () {
         .js.pipe(gulp.dest('dist/routes/'))
 });
 
+gulp.task('tsc:commonjs:app', function () {
+    console.log('Compiling typescript');
+    return gulp.src(['src/app.ts'])
+        .pipe(ts({module: 'commonjs'}))
+        .js.pipe(gulp.dest('dist/'))
+});
+
 gulp.task('tsc:amd', function () {
     console.log('Compiling typescript');
     return gulp.src(['src/public/javascript/**/*.ts'])
@@ -47,5 +54,8 @@ gulp.task('watch', function(){
   gulp.watch('src/public/routes/**/*.ts', ['tsd:commonjs']);
   
   // Наблюдение за .ts файлами
-  gulp.watch('src/public/javascript/**/*.ts', ['tsd:amd']); 
+  gulp.watch('src/public/app.ts', ['tsd:commonjs:app']);
+  
+  // Наблюдение за .ts файлами
+  gulp.watch('src/public/javascript/**/*.ts', ['tsd:amd']);  
 });
