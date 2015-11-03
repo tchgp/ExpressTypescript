@@ -51,11 +51,11 @@ gulp.task('watch', function(){
   gulp.watch('sass/**/*.scss', ['compass']);
   
   // Наблюдение за .ts файлами
-  gulp.watch('src/public/routes/**/*.ts', ['tsd:commonjs']);
+  gulp.watch('src/public/routes/**/*.ts', ['tsc:commonjs']);
   
   // Наблюдение за .ts файлами
-  gulp.watch('src/public/app.ts', ['tsd:commonjs:app']);
+  gulp.watch('src/public/app.ts', ['tsc:commonjs:app']);
   
   // Наблюдение за .ts файлами
-  gulp.watch('src/public/javascript/**/*.ts', ['tsd:amd']);  
+  gulp.watch('src/public/javascript/**/*.ts', ['tsc:amd']);  
 });
