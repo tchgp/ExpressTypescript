@@ -1,3 +1,5 @@
+/// <reference path="../typings/tsd.d.ts" />
+
 import express = require('express');
 import path = require('path');
 import favicon = require('serve-favicon');
